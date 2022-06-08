@@ -15,6 +15,7 @@ const User = mongoose.model(
         ref: "Role"
       }
     ]
-  })
+  },{ collection: 'customer' })
 );
 module.exports = User;
+

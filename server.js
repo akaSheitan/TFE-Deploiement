@@ -6,9 +6,17 @@ const serveStatic = require("serve-static")
 const dbConfig = require("./app/config/db.config");
 var path = require('path');
 
+
 const app = express();
 
-const nameOfDb = 'customer';
+const router = express.Router();
+router.get("/api", (req ,res) => {
+  console.log("API CALL");
+})
+
+router.get("")
+
+const nameOfDb = 'emuixDB';
 // activate cors for security
 /*var corsOptions = {
   origin: "https://data.mongodb-api.com/app/data-tonhu/endpoint/data/beta"
@@ -37,6 +45,7 @@ app.get("/", (req, res) => {
 // routes
 require('./app/routes/auth.routes')(app);
 require('./app/routes/user.routes')(app);
+require('./app/routes/widget.routes')(app);
 // set port, listen for requests
 const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => {
