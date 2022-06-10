@@ -1,4 +1,4 @@
-const controller = require("../controllers/widget.controller");
+const controller = require("../controllers/jsfile.controller");
 module.exports = function(app) {
   app.use(function(req, res, next) {
     res.header(
@@ -7,6 +7,6 @@ module.exports = function(app) {
     );
     next();
   });
-  app.get("/api/widget/findall", controller.allAccess);
-  app.post("/api/widget/find", controller.findWidget);
+  app.get("/api/jsfile/findall", controller.allAccess);
+//   app.post("/api/widget/find", controller.findWidget);
 };

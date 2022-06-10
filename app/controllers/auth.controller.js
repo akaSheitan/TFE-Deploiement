@@ -12,7 +12,7 @@ exports.signup = (req, res) => {
     firstname: "",
     lastname : "",
     location : "",
-    data : {default:[]},
+    data : [],
   });
   user.save((err, user) => {
     if (err) {

@@ -23,4 +23,6 @@ module.exports = function(app) {
   );
   app.post("/api/user/finduser",controller.findUser)
   app.post("/api/user/update",controller.updateUser)
+  app.post("/api/user/addWidget",controller.addWidget)
+  app.post("/api/user/delWidget",controller.delWidget)
 };
